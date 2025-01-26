@@ -1,0 +1,17 @@
+a:hover {
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Adjust as needed */
+    width: 100%;
+    height: 1px;
+    /* Adjust as needed */
+    background: linear-gradient(to right, black, deeppink, black);
+    /* Gradient colors */
+}

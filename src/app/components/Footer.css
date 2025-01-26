@@ -1,0 +1,33 @@
+footer {
+    display: flex;
+    margin: 1em auto 0;
+    padding-top: .5em;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    /* Adjust as needed */
+    width: 100%;
+    height: 1px;
+    /* Adjust as needed */
+    background: linear-gradient(to right, black, deeppink, black);
+    /* Gradient colors */
+}
+
+footer nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1em;
+}

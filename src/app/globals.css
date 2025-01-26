@@ -22,6 +22,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 15%;
 }
 
 * {
@@ -35,8 +36,57 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  padding-bottom: .25em;
+}
+
+p {
+  padding: .25em 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  grid-row-start: 2;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  /* Two columns: one for h1 and one for content */
+  gap: 32px;
+  /* Adjust as needed */
+  align-items: start;
+  margin-bottom: 1.5em;
+}
+
+section h1 {
+  grid-column: 1;
+  position: relative;
+  /* Place h1 in the first column */
+}
+
+section>*:not(h1) {
+  grid-column: 2;
+  /* Place all other content in the second column */
+}
+
+section h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  /* Adjust as needed */
+  width: 100%;
+  height: 1px;
+  /* Adjust as needed */
+  background: linear-gradient(to right, black, deeppink, black);
+  /* Gradient colors */
 }
