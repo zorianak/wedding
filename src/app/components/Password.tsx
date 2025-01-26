@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Password.module.css";
 
-const PASSWORD = "tobey.and.callie.2025"; // Replace with your desired password
+const PASSWORD = ""; 
 
 const PasswordProtectedContent: React.FC = () => {
     const [inputPassword, setInputPassword] = useState("");
