@@ -19,12 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <div className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         {children}
         <Footer />
-      </body>
-    </html>
+      </div>
   );
 }
